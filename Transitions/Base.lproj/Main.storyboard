@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Transitions" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="dWH-tc-efD">
+                                <rect key="frame" x="138.5" y="299.5" width="98" height="68.5"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Me7-mz-HvU">
+                                        <rect key="frame" x="30" y="0.0" width="38" height="30"/>
+                                        <state key="normal" title="Show"/>
+                                        <connections>
+                                            <segue destination="qax-2D-oYF" kind="presentation" id="dcr-fh-mjj"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello, World!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mOD-KJ-cJq">
+                                        <rect key="frame" x="0.0" y="48" width="98" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="dWH-tc-efD" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Nd2-AB-Vw6"/>
+                            <constraint firstItem="dWH-tc-efD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oEw-7s-IhR"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="colorlabel" destination="mOD-KJ-cJq" id="fxm-Yj-8s3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="111" y="134"/>
+        </scene>
+        <!--Blue View Controller-->
+        <scene sceneID="tnO-i4-7xf">
+            <objects>
+                <viewController id="qax-2D-oYF" customClass="BlueViewController" customModule="Transitions" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0Ab-DT-Hls">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello, World!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AFA-He-Uxg">
+                                <rect key="frame" x="138.5" y="84" width="98" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NZf-6b-G1I">
+                                <rect key="frame" x="21" y="42" width="54" height="30"/>
+                                <state key="normal" title="Dismiss"/>
+                                <connections>
+                                    <action selector="dismiss:" destination="qax-2D-oYF" eventType="touchUpInside" id="tvC-5k-Em7"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.85200571670000003" green="1" blue="0.98367825909999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="NZf-6b-G1I" firstAttribute="top" secondItem="FX5-CX-PnP" secondAttribute="top" constant="22" id="J3k-vn-N2e"/>
+                            <constraint firstItem="AFA-He-Uxg" firstAttribute="centerX" secondItem="0Ab-DT-Hls" secondAttribute="centerX" id="O46-S0-htG"/>
+                            <constraint firstItem="AFA-He-Uxg" firstAttribute="top" secondItem="FX5-CX-PnP" secondAttribute="top" constant="64" id="R8Z-Sd-FeP"/>
+                            <constraint firstItem="FX5-CX-PnP" firstAttribute="bottom" secondItem="AFA-He-Uxg" secondAttribute="bottom" constant="562.5" id="YN2-G3-pc6"/>
+                            <constraint firstItem="NZf-6b-G1I" firstAttribute="leading" secondItem="FX5-CX-PnP" secondAttribute="leading" constant="21" id="gbJ-Nl-Ixv"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="FX5-CX-PnP"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="AsE-QM-Uos" appends="YES" id="7aE-Jt-FAF"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="colorlabel" destination="AFA-He-Uxg" id="7Cv-sy-Wmh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A8d-IO-elq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="AsE-QM-Uos">
+                    <connections>
+                        <action selector="pan:" destination="qax-2D-oYF" id="ODA-x4-kwB"/>
+                    </connections>
+                </panGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="839" y="134"/>
+        </scene>
+    </scenes>
+</document>
